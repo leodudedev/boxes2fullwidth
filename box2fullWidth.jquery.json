@@ -1,12 +1,20 @@
 {
     "name": "box2fullWidth",
-    "version": "1.0",
+    "version": "0.1.0",
 	"title": "jQuery Box to Full Width",
     "description": "Animated repositioning of the boxes on the page grid",
     "keywords": [
-        "box","animated repositioning","grid layout","grid"
+        "box","animated","repositioning","grid","layout"
     ],
-    
+	"dependencies": {
+		"jquery": ">=1.5"
+	},
+	"licenses": [
+		{
+		"type": "MIT",
+		"url": "https://docs.google.com/file/d/0B8uoQ-Ue05dOTW5vNTNTZVdyOTg/edit?usp=sharing"
+		}
+	],
     "author": {
         "name": "Leonardo Pinori",
         "url": "https://github.com/leodudedev/"

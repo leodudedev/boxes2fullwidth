@@ -4,7 +4,7 @@
 	"title": "jQuery Box to Full Width",
     "description": "Animated repositioning of the boxes on the page grid",
     "keywords": [
-        "effect","animation","repositioning","grid","layout","box"
+        "effect","animation","repositioning","grid","layout","box","Responsive"
     ],
 	"dependencies": {
 		"jquery": ">=1.5"
@@ -19,5 +19,8 @@
         "name": "Leonardo Pinori",
         "url": "https://github.com/leodudedev/"
     },
-	"docs": "https://googledrive.com/host/0B8uoQ-Ue05dOWVR3OXdwc0x5Z3c/demo.html"
+	"homepage": "https://github.com/leodudedev/boxes2fullwidth",
+	"docs": "https://github.com/leodudedev/boxes2fullwidth/blob/master/README.md",
+	"bugs": "https://github.com/leodudedev/boxes2fullwidth/issues",
+	"demo": "https://googledrive.com/host/0B8uoQ-Ue05dOWVR3OXdwc0x5Z3c/demo.html"
 }

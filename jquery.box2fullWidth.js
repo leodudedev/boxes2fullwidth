@@ -18,10 +18,13 @@
 		},options);
 
 		return this.each(function(i,e){
+		
+		
 			var vecRow=new Array();
 			var _this=e;
 			var _timeout=null;
 			var fixwh=200;
+			
 			function anim(t,cent,cord,index){
 				if(cord==undefined||cord==''||cord==null){t.remove(); return;}
 				var cx=(((fixwh+settings.margin)*cord.c)+settings.margin+cent);
@@ -32,7 +35,7 @@
 				}
 				t.removeClass('b2fw_moved').stop().delay(settings.boxdelay*index).animate({left:cx,top:cy,opacity:1},settings.duration,function(){
 					$(this).addClass('b2fw_moved');
-					if($('.b2fw_moved').length==$(settings.who,_this).length){
+					if($('.b2fw_moved').length==$(_this).children(settings.who).length){
 						settings.positionComplete();
 					}
 				});
@@ -63,12 +66,12 @@
 				var tile=parseInt(tgtw/(fixwh+settings.margin));
 				var cent=((($(_this).width()-tile*(fixwh+settings.margin))-settings.margin)/2)+addmin;
 				vecRow=new Array();
-				for(var i=0; i<=parseInt($(settings.who,_this).length/tile)+20;i++){
+				for(var i=0; i<=parseInt($(_this).children(settings.who).length/tile)+20;i++){
 					var vecCol=new Array();
 					for(var u=1; u<=tile;u++){vecCol.push('x');}
 					vecRow.push(vecCol);
 				}
-				$(settings.who,_this).each(function(i,e){
+				$(_this).children(settings.who).each(function(i,e){
 					anim($(this),cent,getFree($(this),vecRow),i)
 				});
 			}
@@ -76,7 +79,7 @@
 				clearTimeout(_timeout);
 				_timeout=setTimeout(function(){repos();},200);
 			});
-			$(settings.who,_this).each(function(i,e){
+			$(_this).children(settings.who).each(function(i,e){
 				$(e).css('position','absolute');
 			});
 			repos();

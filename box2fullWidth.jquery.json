@@ -1,6 +1,6 @@
 {
     "name": "box2fullWidth",
-    "version": "0.1.1",
+    "version": "0.1.2",
 	"title": "jQuery Box to Full Width",
     "description": "Animated repositioning of the boxes on the page grid",
     "keywords": [
@@ -22,5 +22,5 @@
 	"homepage": "https://github.com/leodudedev/boxes2fullwidth",
 	"docs": "https://github.com/leodudedev/boxes2fullwidth/blob/master/README.md",
 	"bugs": "https://github.com/leodudedev/boxes2fullwidth/issues",
-	"demo": "https://googledrive.com/host/0B8uoQ-Ue05dOWVR3OXdwc0x5Z3c/demo.html"
+	"demo": "http://htmlpreview.github.io/?https://github.com/leodudedev/boxes2fullwidth/blob/master/demo.html"
 }

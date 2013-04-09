@@ -14,17 +14,16 @@
 			margin:5,
 			duration:500,
 			boxdelay:0,
+			bottomMargin:50,
 			positionComplete:function(){}
 		},options);
 
 		return this.each(function(i,e){
-		
-		
 			var vecRow=new Array();
 			var _this=e;
 			var _timeout=null;
 			var fixwh=200;
-			
+			var maxy=0;
 			function anim(t,cent,cord,index){
 				if(cord==undefined||cord==''||cord==null){t.remove(); return;}
 				var cx=(((fixwh+settings.margin)*cord.c)+settings.margin+cent);
@@ -35,7 +34,16 @@
 				}
 				t.removeClass('b2fw_moved').stop().delay(settings.boxdelay*index).animate({left:cx,top:cy,opacity:1},settings.duration,function(){
 					$(this).addClass('b2fw_moved');
+					
+					if(($(this).position().top+$(this).height())>maxy){
+						maxy=($(this).position().top+$(this).height());
+					}
+					
 					if($('.b2fw_moved').length==$(_this).children(settings.who).length){
+						
+						if(settings.bottomMargin>0){
+							$(_this).height(maxy+settings.bottomMargin)
+						}
 						settings.positionComplete();
 					}
 				});
@@ -58,6 +66,7 @@
 			}
 			
 			function repos(){
+				maxy=0;
 				var tgtw=$(_this).width(), addmin=0;
 				if($(_this).width()<settings.minwidth){
 					tgtw=settings.minwidth;

@@ -31,6 +31,7 @@ all boxes must have all the usual width
 		margin:5,	// Margin between boxes
 		duration:500,	// Duration of animation
 		boxdelay:0,	// Delay between animation box
+		bottomMargin:50, // margin from bottom (if 0 no set #content height)
 		positionComplete:function(){}	// Animation end callback
 	});
 </script>

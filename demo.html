@@ -7,8 +7,8 @@
 @keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-moz-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-webkit-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-o-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}
 #lamp{position:fixed; right:0; top:0; width:350px; height:90px; line-height:90px; font-size:36px; text-align:center; background:#FFB7B7; animation:lamp 0.5s infinite; -moz-animation:lamp 0.5s infinite; -webkit-animation:lamp 0.5s infinite; -o-animation:lamp 0.5s infinite;}
 
-#content{width:100%; height:600px; position:relative;}
-.box{width:200px; background:#CCCCCC;}
+#content{width:100%; position:relative; height:auto; background:#99FF33}
+.box{width:200px; background:#CCCCCC; }
 
 
 
@@ -37,6 +37,7 @@ all boxes must have all the usual width
 		margin:5,	// Margin between boxes
 		duration:500,	// Duration of animation
 		boxdelay:0,	// Delay between animation box
+		bottomMargin:50,	// margin from bottom
 		positionComplete:function(){}	// Animation end callback
 	});
 </script>
@@ -78,6 +79,7 @@ all boxes must have all the usual width
 			margin:5,
 			duration:350,
 			boxdelay:15,
+			bottomMargin:20,
 			positionComplete:function(){ console.log("end!")}
 		});
 </script>

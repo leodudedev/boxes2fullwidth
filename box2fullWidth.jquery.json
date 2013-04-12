@@ -4,7 +4,7 @@
 	"title": "jQuery Box to Full Width",
     "description": "Animated repositioning of the boxes on the page grid",
     "keywords": [
-        "effect","animation","repositioning","grid","layout","box","responsive","reflowing","equal width","responsive layout"
+        "effect","animation","repositioning","grid","layout","box","responsive","reflowing","equalwidth"
     ],
 	"dependencies": {
 		"jquery": ">=1.5"

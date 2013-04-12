@@ -1,10 +1,10 @@
 {
     "name": "box2fullWidth",
-    "version": "0.1.2",
+    "version": "0.1.3",
 	"title": "jQuery Box to Full Width",
     "description": "Animated repositioning of the boxes on the page grid",
     "keywords": [
-        "effect","animation","repositioning","grid","layout","box","Responsive"
+        "effect","animation","repositioning","grid","layout","box","responsive","reflowing","equal width","responsive layout"
     ],
 	"dependencies": {
 		"jquery": ">=1.5"

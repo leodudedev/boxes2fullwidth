@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>boxes2fullwidth demo</title>
+<style>
+@keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-moz-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-webkit-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}@-o-keyframes lamp{from {background:#fff;}to {background:#FFB7B7;}}
+#lamp{position:fixed; right:0; top:0; width:350px; height:90px; line-height:90px; font-size:36px; text-align:center; background:#FFB7B7; animation:lamp 0.5s infinite; -moz-animation:lamp 0.5s infinite; -webkit-animation:lamp 0.5s infinite; -o-animation:lamp 0.5s infinite;}
+
+#content{width:100%; position:relative; height:auto; background:#99FF33}
+.box{width:200px; background:#CCCCCC; }
+
+
+
+
+</style>
+</head>
+<body>
+<div id="lamp">resizes the page</div>
+<h1>boxes2fullwidth demo</h1>
+<xmp>
+the containet must have width 100%
+all boxes must have all the usual width
+<div id="content">
+    <div style="width:200px"></div>
+    <div style="width:200px"></div>
+    <div style="width:200px"></div>
+    ...
+    ...
+</div>
+<script src="jquery.min.js"></script>
+<script src="jquery.box2fullWidth.js"></script>
+<script language="javascript">
+	$('#content').box2fullWidth({
+		minwidth:400,	// Min page width
+		who:'div',	// Who should be repositioned within the container. es. div or img or .class
+		margin:5,	// Margin between boxes
+		duration:500,	// Duration of animation
+		boxdelay:0,	// Delay between animation box
+		bottomMargin:50,	// margin from bottom
+		positionComplete:function(){}	// Animation end callback
+	});
+</script>
+</xmp>
+<div id="content">
+    <div class="box"><div>Lorem Ipsum has been the industry's standard dummy</div> </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+    <div class="box">Lorem Ipsum has been the industry's</div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+    <div class="box">Lorem Ipsum has been the industry's</div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+    <div class="box">Lorem Ipsum has been the industry's</div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+    <div class="box">Lorem Ipsum has been the industry's</div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a </div>
+    <div class="box">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </div>
+</div>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.box2fullWidth.js"></script>
+
+<script language="javascript">
+	$('#content').box2fullWidth({
+			minwidth:400,
+			who:'div',
+			margin:5,
+			duration:350,
+			boxdelay:15,
+			bottomMargin:20,
+			positionComplete:function(){ console.log("end!")}
+		});
+</script>
+
+</body>
+</html>

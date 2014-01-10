@@ -41,5 +41,4 @@ all boxes must have all the usual width
 Demo
 ---------------
 
-http://htmlpreview.github.io/?https://github.com/leodudedev/boxes2fullwidth/blob/master/demo.html
-
+http://leodudedev.github.io/boxes2fullwidth
